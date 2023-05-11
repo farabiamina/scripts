@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exline</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="d-flex justify-content-center m-5">
+        <div class="d-flex justify-content-between align-items-stretch w-100">
+            <form class="w-50 m-5">
+                <div class="form-group">
+                    <label for="origin-input">Откуда</label>
+                    <input minlength="2" type="text" class="form-control" id="origin-input" list="origin-list">
+                    <datalist id="origin-list"></datalist>
+                    <!-- <select class="form-select w-100" id="origin-select">
+                    </select> -->
+                </div>
+                <div class="form-group">
+                    <label for="destination-input">Куда</label>
+                    <input minlength="2" type="text" class="form-control" id="destination-input" list="destination-list">
+                    <datalist id="destination-list"></datalist>
+                </div>
+                <div class="form-group">
+                    <label for="service-select">Услуга</label>
+                    <select class="form-control" id="service-select">
+                      <option value="express">Экспресс</option>
+                      <option value="standart">Стандарт</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="weight-input">Вес</label>
+                    <input type="text" class="form-control" id="weight-input">
+                </div>
+                <div class="form-group">
+                    <label for="fee-input">Объявленная стоимость</label>
+                    <input type="number" value="15000" min="15000" class="form-control" id="fee-input">
+                </div>
+                <button type="button" class="btn btn-success">Рассчитать</button>
+            </form>
+            <div style="height: 400px;" class="d-flex flex-column  w-50 m-5 justify-content-center align-items-center border border-success">
+                <h6>Стоимость доставки:</h6>
+                <p class="display-4" id="total-price"></p>
+                <h6>Общая стоимость</h6>
+                <p id="price"></p>
+                <h6>Топливная надбавка:</h6>
+                <p id="fuel"></p>
+                <h6>Cбор за ценность в 15000 тг:</h6>
+                <p id="fee" ></p>
+            </div>
+        </div>
+    </div>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
